@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Exercise5.FilesHandling.BinarySerialization" Collapsed="true">
+    <Position X="6.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FileHandling\BinarySerialization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Garage.Garage&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEABAAAAAgABAAAAAAAAQAAAAAAAAEAgAAAAgAAAA=</HashCode>
+      <FileName>Garage\Garage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Exercise5.Garage.GarageHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAEAAAEAAAAAAAAAgAAAQAAAgAAAAIAAgAARAAAAAA=</HashCode>
+      <FileName>Garage\GarageHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Exercise5.Garage.UserInputFinal" Collapsed="true">
+    <Position X="15.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAE=</HashCode>
+      <FileName>Garage\UserInputFinal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Menus.GarageCreationMenu" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAEAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAwAAAA=</HashCode>
+      <FileName>Menus\GarageCreationMenu.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Exercise5.Menus.MainMenu" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAEAAAAgAAAAAAAAAAJAEAAAAAAAAAAwAAAA=</HashCode>
+      <FileName>Menus\MainMenu.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Exercise5.Menus.VehicleCreationMenu" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAEAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Menus\VehicleCreationMenu.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Exercise5.UserInterfaces.ConsoleUI" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABgAAAAAAAgAAAIAAAAAAAACAAAAACAAAAAAAFAAAI=</HashCode>
+      <FileName>UserInterfaces\ConsoleUI.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Exercise5.Vehicles.Air.Airplane" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Vehicles\Air\Airplane.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Vehicles.Air.BaseAir" Collapsed="true">
+    <Position X="1.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicles\Air\BaseAir.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Vehicles.Air.Helicopter" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicles\Air\Helicopter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Vehicles.Land.BaseLand" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicles\Land\BaseLand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Vehicles.Land.Bicycle" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicles\Land\Bicycle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Vehicles.Land.Bus" Collapsed="true">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicles\Land\Bus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Vehicles.Land.Car" Collapsed="true">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicles\Land\Car.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Vehicles.Land.Motorcycle" Collapsed="true">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicles\Land\Motorcycle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Vehicles.Land.Truck" Collapsed="true">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicles\Land\Truck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Vehicles.Sea.BaseSea" Collapsed="true">
+    <Position X="18.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicles\Sea\BaseSea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Vehicles.Sea.MotorBoat" Collapsed="true">
+    <Position X="16.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicles\Sea\MotorBoat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Vehicles.Sea.RowBoat" Collapsed="true">
+    <Position X="18.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Vehicles\Sea\RowBoat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Vehicles.Sea.Submarine" Collapsed="true">
+    <Position X="20.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicles\Sea\Submarine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Vehicles.Vehicle" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAIgIABAACAAAEAAAAAAgAAAEAA=</HashCode>
+      <FileName>Vehicles\Vehicle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.334" />
+  </Class>
+  <Class Name="Exercise5.Vehicles.VehicleHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABEoiAkAAAAQASAAEgECAACAAAAQACgoCBQAABAQAQ=</HashCode>
+      <FileName>Vehicles\VehicleHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Exercise5.ContainerConfig" Collapsed="true">
+    <Position X="4.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ContainerConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Program" Collapsed="true">
+    <Position X="6.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise5.Startup" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Startup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Exercise5.Garage.IGarage&lt;T&gt;" Collapsed="true">
+    <Position X="19" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAABAAAAAAAAQAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Garage\IGarage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Exercise5.Garage.IGarageHandler" Collapsed="true">
+    <Position X="15.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAEAAAAAAAAAAAAAgAAAQAAAAAAAAIAAgAABAAAAAA=</HashCode>
+      <FileName>Garage\IGarageHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Exercise5.Menus.IGarageCreationMenu" Collapsed="true">
+    <Position X="17.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Menus\IGarageCreationMenu.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Exercise5.Menus.IMainMenu" Collapsed="true">
+    <Position X="13.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Menus\IMainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Exercise5.Menus.IVehicleCreationMenu" Collapsed="true">
+    <Position X="10.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Menus\IVehicleCreationMenu.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Exercise5.UserInterfaces.IConsoleUI" Collapsed="true">
+    <Position X="20.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABgAAAAAAAgAAAIAAAAAAAACAAAAACAAAAAAAFAAAI=</HashCode>
+      <FileName>UserInterfaces\IConsoleUI.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Exercise5.Vehicles.IVehicle" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAIgIABAACAAAEAAAAAAgAAAEAA=</HashCode>
+      <FileName>Vehicles\IVehicle.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Exercise5.Vehicles.IVehicleHandler" Collapsed="true">
+    <Position X="8.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABEAgAgAAAAAAAAAAAEAAAAAAAAAAAAoCAAAABAAAQ=</HashCode>
+      <FileName>Vehicles\IVehicleHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Exercise5.IStartup" Collapsed="true">
+    <Position X="12" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>IStartup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
