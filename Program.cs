@@ -7,8 +7,7 @@ namespace Exercise5
     {
         private static void Main(string[] args)
         {
-            var container = ContainerConfig.Configure();
-            // TODO: User input validation
+            var container = ContainerConfig.Configure();            
             // TODO: Try catch file handling
             using (var scope = container.BeginLifetimeScope())
             {

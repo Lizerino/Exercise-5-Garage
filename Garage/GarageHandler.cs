@@ -181,6 +181,10 @@ namespace Exercise5.Garage
                     if (String.IsNullOrWhiteSpace(propertyValueSplit[0]) || String.IsNullOrWhiteSpace(propertyValueSplit[1]))
                     {
                     }
+                    else if (!validProperties.Contains(propertyValueSplit[0]))
+                    {
+                        cui.WriteLine($"{propertyValueSplit[0]} is not a valid property");
+                    }
                     else
                     {
                         userInputFinal.property = propertyValueSplit[0];
@@ -218,6 +222,7 @@ namespace Exercise5.Garage
             // Write all vehicles and properties from list
             if (vehicleList.Count > 0)
             {
+                cui.WriteLine("Vehicles matching all valid criteria:");
                 foreach (var vehicle in vehicleList)
                 {
                     cui.WriteLine(vehicle.GetType().Name);
