@@ -181,16 +181,17 @@ namespace Exercise5.Garage
             // Gets valid properties
             IEnumerable<string> validProperties = getValidProperties(garage);
 
+            // Display all valid properties
             foreach (var property in validProperties) { cui.Write($"{property} "); }
             cui.WriteLine("");
 
-            // Checks that user input is valid and that the search property exists
+            // Checks that user input is valid and that the searched for properties exists
             List<UserInputFinal> userInputFinalList = ValidateAndFormatUserInput(validProperties);
 
             // Save all vehicles matching user input
             List<IVehicle> vehicleList = GetMatchingVehicles(garage, userInputFinalList);
 
-            // Write all matching vehicles and properties from list
+            // Display all matching vehicles and properties from list
             DisplayMatchingVehicles(vehicleList);
 
             cui.ReadKey();
