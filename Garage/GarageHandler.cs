@@ -177,27 +177,74 @@ namespace Exercise5.Garage
             cui.WriteLine("Make sure you separate each criteria with a comma and the separate the value from the attribute with a =");
             cui.WriteLine("Please be aware that the attribute name IS case sensitive");
             cui.WriteLine("Valid attributes are the following:");
-            // Get valid properties
-            var validPropertiesList = new List<string>();
-            foreach (var vehicle in garage)
-            {
-                var propertiesInfoList = new List<PropertyInfo[]>();
-                propertiesInfoList.Add(vehicle.GetType().GetProperties());
-                foreach (var properties in propertiesInfoList)
-                {
-                    foreach (var property in properties)
-                    {
-                        validPropertiesList.Add(property.Name.ToString());
-                    }
-                }
-            }
-            var validProperties = validPropertiesList.Distinct();
-            foreach (var property in validProperties)
-            {
-                cui.Write($"{property} ");
-            }
+
+            // Gets valid properties
+            IEnumerable<string> validProperties = getValidProperties(garage);
+
+            foreach (var property in validProperties) { cui.Write($"{property} "); }
             cui.WriteLine("");
 
+            // Checks that user input is valid and that the search property exists
+            List<UserInputFinal> userInputFinalList = ValidateAndFormatUserInput(validProperties);
+
+            // Save all vehicles matching user input
+            List<IVehicle> vehicleList = GetMatchingVehicles(garage, userInputFinalList);
+
+            // Write all matching vehicles and properties from list
+            DisplayMatchingVehicles(vehicleList);
+
+            cui.ReadKey();
+        }
+
+        private void DisplayMatchingVehicles(List<IVehicle> vehicleList)
+        {
+            if (vehicleList.Count > 0)
+            {
+                cui.WriteLine("Vehicles matching all valid criteria:");
+                foreach (var vehicle in vehicleList)
+                {
+                    cui.WriteLine(vehicle.GetType().Name);
+                    var vehicleProperties = vehicle.GetType().GetProperties();
+                    foreach (var vehicleProperty in vehicleProperties)
+                    {
+                        cui.WriteLine(vehicleProperty.Name + ": " + vehicleProperty.GetValue(vehicle).ToString());
+                    }
+                    cui.WriteLine("");
+                }
+            }
+            else
+            {
+                cui.WriteLine("No vehicles matching the search criteria were found");
+            }
+        }
+
+        private static List<IVehicle> GetMatchingVehicles(IGarage<IVehicle> garage, List<UserInputFinal> userInputFinalList)
+        {
+            var vehicleList = new List<IVehicle>();
+            foreach (var vehicle in garage)
+            {
+                bool vehicleMatch = true;
+                foreach (var criteria in userInputFinalList)
+                {
+                    string propertyValue = vehicle.GetType().GetProperty(criteria.property)?.GetValue(vehicle).ToString().ToLower();
+
+                    if (criteria.value != propertyValue)
+                    {
+                        vehicleMatch = false;
+                        break;
+                    }
+                }
+                if (vehicleMatch == true && userInputFinalList.Count > 0)
+                {
+                    vehicleList.Add(vehicle);
+                }
+            }
+
+            return vehicleList;
+        }
+
+        private List<UserInputFinal> ValidateAndFormatUserInput(IEnumerable<string> validProperties)
+        {
             var userInput = cui.ReadLine();
             var userInputFinalList = new List<UserInputFinal>();
             var userInputSplitByCriteria = userInput.Split(",");
@@ -228,48 +275,27 @@ namespace Exercise5.Garage
                 }
             }
 
-            // Save all vehicles matching user input
-            var vehicleList = new List<IVehicle>();
+            return userInputFinalList;
+        }
+
+        private static IEnumerable<string> getValidProperties(IGarage<IVehicle> garage)
+        {
+            // Get a list of distinct valid properties
+            var validPropertiesList = new List<string>();
             foreach (var vehicle in garage)
             {
-                bool vehicleMatch = true;
-                foreach (var criteria in userInputFinalList)
+                var propertiesInfoList = new List<PropertyInfo[]>();
+                propertiesInfoList.Add(vehicle.GetType().GetProperties());
+                foreach (var properties in propertiesInfoList)
                 {
-                    string propertyValue = vehicle.GetType().GetProperty(criteria.property)?.GetValue(vehicle).ToString().ToLower();
-
-                    if (criteria.value != propertyValue)
+                    foreach (var property in properties)
                     {
-                        vehicleMatch = false;
-                        break;
+                        validPropertiesList.Add(property.Name.ToString());
                     }
                 }
-                if (vehicleMatch == true && userInputFinalList.Count > 0)
-                {
-                    vehicleList.Add(vehicle);
-                }
             }
-
-            // Write all vehicles and properties from list
-            if (vehicleList.Count > 0)
-            {
-                cui.WriteLine("Vehicles matching all valid criteria:");
-                foreach (var vehicle in vehicleList)
-                {
-                    cui.WriteLine(vehicle.GetType().Name);
-                    var vehicleProperties = vehicle.GetType().GetProperties();
-                    foreach (var vehicleProperty in vehicleProperties)
-                    {
-                        cui.WriteLine(vehicleProperty.Name + ": " + vehicleProperty.GetValue(vehicle).ToString());
-                    }
-                    cui.WriteLine("");
-                }
-            }
-            else
-            {
-                cui.WriteLine("No vehicles matching the search criteria were found");
-            }
-
-            cui.ReadKey();
+            var validProperties = validPropertiesList.Distinct();
+            return validProperties;
         }
     }
 }
