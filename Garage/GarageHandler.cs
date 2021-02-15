@@ -23,10 +23,40 @@ namespace Exercise5.Garage
         public IGarage<IVehicle> CreateGarage()
         {
             cui.ResetColor();
-            var size = SetMaxCapacity();
             var name = SetName();
+            var size = SetMaxCapacity();
             IGarage<IVehicle> garage = new Garage<IVehicle>(name, size);
             return garage;
+        }
+
+        /// <summary>
+        /// User input for naming a new garage
+        /// </summary>
+        /// <returns></returns>
+        private string SetName()
+        {
+            cui.WriteLine("Enter name of garage");
+            string name = null;
+            while (String.IsNullOrWhiteSpace(name))
+            {
+                name = cui.ReadLine();
+            }
+            return name;
+        }
+
+        /// <summary>
+        /// Ask user for an int to use as initial max capacity for garage
+        /// </summary>
+        /// <returns></returns>
+        private int SetMaxCapacity()
+        {
+            int maxCapacityChoice;
+            cui.WriteLine("Enter size of garage.");
+            while (!int.TryParse(cui.ReadLine(), out maxCapacityChoice) || maxCapacityChoice < 0)
+            {
+                cui.Write("That is not a valid number.");
+            }
+            return maxCapacityChoice;
         }
 
         /// <summary>
@@ -240,36 +270,6 @@ namespace Exercise5.Garage
             }
 
             cui.ReadKey();
-        }
-
-        /// <summary>
-        /// Ask user for an int to use as initial max capacity for garage
-        /// </summary>
-        /// <returns></returns>
-        private int SetMaxCapacity()
-        {
-            int maxCapacityChoice;
-            cui.WriteLine("Enter size of garage.");
-            while (!int.TryParse(cui.ReadLine(), out maxCapacityChoice) || maxCapacityChoice < 0)
-            {
-                cui.Write("That is not a valid number.");
-            }
-            return maxCapacityChoice;
-        }
-
-        /// <summary>
-        /// User input for naming a new garage
-        /// </summary>
-        /// <returns></returns>
-        private string SetName()
-        {
-            cui.WriteLine("Enter name of garage");
-            string name = null;
-            while (String.IsNullOrWhiteSpace(name))
-            {
-                name = cui.ReadLine();
-            }
-            return name;
         }
     }
 }
