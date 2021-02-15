@@ -196,6 +196,10 @@ namespace Exercise5.Garage
             cui.ReadKey();
         }
 
+        /// <summary>
+        /// Displays all vehicles matching the user supplied criterias
+        /// </summary>
+        /// <param name="vehicleList"></param>
         private void DisplayMatchingVehicles(List<IVehicle> vehicleList)
         {
             if (vehicleList.Count > 0)
@@ -218,6 +222,12 @@ namespace Exercise5.Garage
             }
         }
 
+        /// <summary>
+        /// Get vehicles matching the user supplied criteria
+        /// </summary>
+        /// <param name="garage"></param>
+        /// <param name="userInputFinalList"></param>
+        /// <returns></returns>
         private static List<IVehicle> GetMatchingVehicles(IGarage<IVehicle> garage, List<UserInputFinal> userInputFinalList)
         {
             var vehicleList = new List<IVehicle>();
@@ -243,6 +253,11 @@ namespace Exercise5.Garage
             return vehicleList;
         }
 
+        /// <summary>
+        /// Validates user input in regards to formatting and valid properties
+        /// </summary>
+        /// <param name="validProperties"></param>
+        /// <returns></returns>
         private List<UserInputFinal> ValidateAndFormatUserInput(IEnumerable<string> validProperties)
         {
             var userInput = cui.ReadLine();
@@ -278,6 +293,11 @@ namespace Exercise5.Garage
             return userInputFinalList;
         }
 
+        /// <summary>
+        /// Gets all valid properties from currently existing vehicles in garag
+        /// </summary>
+        /// <param name="garage"></param>
+        /// <returns></returns>
         private static IEnumerable<string> getValidProperties(IGarage<IVehicle> garage)
         {
             // Get a list of distinct valid properties
