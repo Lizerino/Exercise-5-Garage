@@ -52,9 +52,9 @@ namespace Exercise5.Garage
         {
             int maxCapacityChoice;
             cui.WriteLine("Enter size of garage.");
-            while (!int.TryParse(cui.ReadLine(), out maxCapacityChoice) || maxCapacityChoice < 0)
+            while (!int.TryParse(cui.ReadLine(), out maxCapacityChoice) || maxCapacityChoice < 1)
             {
-                cui.Write("That is not a valid number.");
+                cui.WriteLine("That is not a valid number.");
             }
             return maxCapacityChoice;
         }

@@ -50,7 +50,7 @@ namespace Exercise5.Garage
                 T vehicle = garageVehicleList[i];
                 if (vehicleToRemove.Equals(vehicle))
                 {
-                    garageVehicleList[i] = default(T);
+                    garageVehicleList[i] = default;
                 }
             }
         }
@@ -61,12 +61,16 @@ namespace Exercise5.Garage
         /// <param name="vehicle"></param>
         private void DoubleArraySize(T vehicle)
         {
-            var tempArray = new T[garageVehicleList.Length];
+            // Create a new temporary array and copy current vehiclelist to temporary array
+            var tempArray = new T[garageVehicleList.Length];             
             garageVehicleList.CopyTo(tempArray, 0);
-            int oldLength = garageVehicleList.Length;
+            // Get the length of the old array and double it
+            int oldLength = garageVehicleList.Length;            
             int newLength = oldLength * 2;
+            // Create an array with the new size and copy the values back from the temp array
             garageVehicleList = new T[newLength];
             tempArray.CopyTo(garageVehicleList, 0);
+            // Add vehicle
             garageVehicleList.SetValue(vehicle, oldLength);
         }
 

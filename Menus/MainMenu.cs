@@ -25,6 +25,9 @@ namespace Exercise5.Menus
 
         public void Show()
         {
+            // Reset color of text if not default at start
+            cui.ResetColor();
+
             IGarage<IVehicle> garage;
             try
             {
