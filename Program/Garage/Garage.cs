@@ -51,6 +51,7 @@ namespace Exercise5.Garage
                 if (vehicleToRemove.Equals(vehicle))
                 {
                     garageVehicleList[i] = default;
+                    break;
                 }
             }
         }
