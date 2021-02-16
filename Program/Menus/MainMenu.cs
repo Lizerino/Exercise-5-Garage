@@ -72,6 +72,10 @@ namespace Exercise5.Menus
                 cui.ResetColor();
                 cui.WriteLine("List the amount and type of vehicles in garage");
                 cui.ForegroundColor(14);
+                cui.Write("8: ");
+                cui.ResetColor();
+                cui.WriteLine("Create a default garage and seed it");
+                cui.ForegroundColor(14);
                 cui.Write("Q: ");
                 cui.ResetColor();
                 cui.WriteLine("Save Garage and Quit Program");
@@ -115,6 +119,12 @@ namespace Exercise5.Menus
                         // List the types and number of vehicles
                         garageHandler.ListVehicleTypes(garage);
                         break;
+
+                    case '8':
+                        // Create a default garage and seed it with vehicles
+                        garage = garageHandler.CreateDefaultGarage();
+                        break;
+
 
                     case 'q':
                         SaveGarageToFile(garage);

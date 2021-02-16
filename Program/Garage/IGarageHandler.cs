@@ -17,5 +17,7 @@ namespace Exercise5.Garage
         void SearchForVehicleViaRegistrationNumber(IGarage<IVehicle> garage);
 
         void SearchForVehicleViaAttribute(IGarage<IVehicle> garage);
+
+        IGarage<IVehicle> CreateDefaultGarage();
     }
 }

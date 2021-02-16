@@ -1,5 +1,6 @@
 ﻿using Exercise5.UserInterfaces;
 using Exercise5.Vehicles;
+using Exercise5.Vehicles.Air;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace Exercise5.Garage
         public GarageHandler(IConsoleUI cui)
         {
             this.cui = cui;
+            ;
         }
 
         /// <summary>
@@ -317,6 +319,16 @@ namespace Exercise5.Garage
             }
             var validProperties = validPropertiesList.Distinct();
             return validProperties;
+        }
+
+        public IGarage<IVehicle> CreateDefaultGarage()
+        {
+            IGarage<IVehicle> garage = new Garage<IVehicle>("Default", 2);
+            IVehicle vehicleToAdd = new Airplane(120,"White",244,"Flight 1",800,27000,5.6,25,"Pilots License",12000,"Jetfuel");
+            garage.AddVehicle(vehicleToAdd);
+            vehicleToAdd = new Helicopter(2, "Green", 2, "Heli 1", 180, 4500, 3.2, 5.2, "Pilots License", 6000, 1);
+            garage.AddVehicle(vehicleToAdd);
+            return garage;
         }
     }
 }
