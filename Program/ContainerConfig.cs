@@ -23,8 +23,7 @@ namespace Exercise5
             builder.RegisterType<Startup>().As<IStartup>();
 
             return builder.Build();
-
-            // TODO: Look up ways to automate the registry process. RegisterAssembly didn't work but there has got to be other ways
+            // Question: Kan man automatisera det här?
         }
     }
 }

@@ -14,8 +14,7 @@ namespace Exercise5.Garage
 
         public GarageHandler(IConsoleUI cui)
         {
-            this.cui = cui;
-            ;
+            this.cui = cui;            
         }
 
         /// <summary>
@@ -233,6 +232,7 @@ namespace Exercise5.Garage
         /// <returns></returns>
         private static List<IVehicle> GetMatchingVehicles(IGarage<IVehicle> garage, List<UserInputFinal> userInputFinalList)
         {
+            // Question: Kan man göra det här med linq?
             var vehicleList = new List<IVehicle>();
             foreach (var vehicle in garage)
             {
@@ -304,6 +304,7 @@ namespace Exercise5.Garage
         private static IEnumerable<string> getValidProperties(IGarage<IVehicle> garage)
         {
             // Get a list of distinct valid properties
+            // Question: Kan man lösa det här med linq?
             var validPropertiesList = new List<string>();
             foreach (var vehicle in garage)
             {
@@ -321,6 +322,10 @@ namespace Exercise5.Garage
             return validProperties;
         }
 
+        /// <summary>
+        /// Creates a default garage with 2 slots filled with an airplane and a helicopter
+        /// </summary>
+        /// <returns></returns>
         public IGarage<IVehicle> CreateDefaultGarage()
         {
             IGarage<IVehicle> garage = new Garage<IVehicle>("Default", 2);
