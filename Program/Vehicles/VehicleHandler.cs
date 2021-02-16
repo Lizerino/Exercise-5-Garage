@@ -111,7 +111,7 @@ namespace Exercise5.Vehicles
 
             // Seating capacity
             cui.WriteLine("Please enter the vehicles seating capacity.");
-            while (!int.TryParse(cui.ReadLine(), out seatingCapacity) || seatingCapacity < 0)
+            while (!int.TryParse(cui.ReadLine(), out seatingCapacity) || seatingCapacity < 0 || seatingCapacity>int.MaxValue)
             {
                 cui.WriteLine("Invalid seating capacity. Please enter a seating capacity of 0 or more.");
             }
