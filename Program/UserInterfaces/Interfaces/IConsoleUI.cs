@@ -1,4 +1,4 @@
-﻿namespace Exercise5.UserInterfaces
+﻿namespace Exercise5.UserInterfaces.Interfaces
 
 {
     public interface IConsoleUI

@@ -1,7 +1,9 @@
 ﻿using Exercise5.Garage;
+using Exercise5.Garage.Interfaces;
 using Exercise5.Vehicles;
+using Exercise5.Vehicles.Interfaces;
 
-namespace Exercise5.Menus
+namespace Exercise5.Menus.Interfaces
 {
     public interface IVehicleCreationMenu
     {

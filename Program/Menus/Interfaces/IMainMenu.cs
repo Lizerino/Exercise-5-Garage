@@ -1,4 +1,4 @@
-﻿namespace Exercise5.Menus
+﻿namespace Exercise5.Menus.Interfaces
 {
     public interface IMainMenu
     {

@@ -1,4 +1,6 @@
-﻿using Exercise5.Vehicles;
+﻿using Exercise5.Garage.Interfaces;
+using Exercise5.Vehicles;
+using Exercise5.Vehicles.Interfaces;
 using System;
 using System.Collections;
 using System.Collections.Generic;

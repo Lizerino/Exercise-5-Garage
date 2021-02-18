@@ -1,6 +1,9 @@
 ﻿using Exercise5.Garage;
+using Exercise5.Garage.Interfaces;
 using Exercise5.UserInterfaces;
+using Exercise5.UserInterfaces.Interfaces;
 using Exercise5.Vehicles.Air;
+using Exercise5.Vehicles.Interfaces;
 using Exercise5.Vehicles.Land;
 using Exercise5.Vehicles.Sea;
 using System;

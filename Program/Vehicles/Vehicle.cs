@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Exercise5.Vehicles.Interfaces;
+using System;
 
 namespace Exercise5.Vehicles
 {

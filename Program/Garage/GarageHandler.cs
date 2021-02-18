@@ -1,6 +1,9 @@
-﻿using Exercise5.UserInterfaces;
+﻿using Exercise5.Garage.Interfaces;
+using Exercise5.UserInterfaces;
+using Exercise5.UserInterfaces.Interfaces;
 using Exercise5.Vehicles;
 using Exercise5.Vehicles.Air;
+using Exercise5.Vehicles.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Exercise5.Interfaces;
 
 namespace Exercise5
 

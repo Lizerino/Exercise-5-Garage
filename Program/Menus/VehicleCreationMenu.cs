@@ -1,6 +1,10 @@
 ﻿using Exercise5.Garage;
+using Exercise5.Garage.Interfaces;
+using Exercise5.Menus.Interfaces;
 using Exercise5.UserInterfaces;
+using Exercise5.UserInterfaces.Interfaces;
 using Exercise5.Vehicles;
+using Exercise5.Vehicles.Interfaces;
 
 namespace Exercise5.Menus
 {
@@ -9,64 +13,34 @@ namespace Exercise5.Menus
         private IConsoleUI cui;
         private IVehicleHandler vehicleHandler;
         private IVehicle vehicle;
+        private IMenuUtil menuUtil;
 
-        public VehicleCreationMenu(IConsoleUI cui, IVehicleHandler vehicleHandler)
+        public VehicleCreationMenu(IConsoleUI cui, IVehicleHandler vehicleHandler, IMenuUtil menuUtil)
         {
             this.cui = cui;
             this.vehicleHandler = vehicleHandler;
+            this.menuUtil = menuUtil;
         }
 
         public IVehicle Show(IGarage<IVehicle> garage)
         {
-            cui.Clear();
+            cui.Clear();            
             cui.ResetColor();
             cui.WriteLine("What kind of vehicle would you like to create?");
             cui.WriteLine("");
-            cui.ForegroundColor(14);
-            cui.Write("1: ");
-            cui.ResetColor();
-            cui.WriteLine("Airplane");
-            cui.ForegroundColor(14);
-            cui.Write("2: ");
-            cui.ResetColor();
-            cui.WriteLine("Helicopter");
-            cui.ForegroundColor(14);
-            cui.Write("3: ");
-            cui.ResetColor();
-            cui.WriteLine("Bicycle");
-            cui.ForegroundColor(14);
-            cui.Write("4: ");
-            cui.ResetColor();
-            cui.WriteLine("Bus");
-            cui.ForegroundColor(14);
-            cui.Write("5: ");
-            cui.ResetColor();
-            cui.WriteLine("Car");
-            cui.ForegroundColor(14);
-            cui.Write("6: ");
-            cui.ResetColor();
-            cui.WriteLine("Motorcycle");
-            cui.ForegroundColor(14);
-            cui.Write("7: ");
-            cui.ResetColor();
-            cui.WriteLine("Truck");
-            cui.ForegroundColor(14);
-            cui.Write("8: ");
-            cui.ResetColor();
-            cui.WriteLine("Motorboat");
-            cui.ForegroundColor(14);
-            cui.Write("9: ");
-            cui.ResetColor();
-            cui.WriteLine("Rowboat");
-            cui.ForegroundColor(14);
-            cui.Write("A: ");
-            cui.ResetColor();
-            cui.WriteLine("Submarine");
+            menuUtil.MenuOption("1", "Airplane");
+            menuUtil.MenuOption("2", "Helicopter");
+            menuUtil.MenuOption("3", "Bicycle");
+            menuUtil.MenuOption("4", "Bus");
+            menuUtil.MenuOption("5", "Car");
+            menuUtil.MenuOption("6", "Motorcycle");
+            menuUtil.MenuOption("7", "Truck");
+            menuUtil.MenuOption("8", "Motorboat");
+            menuUtil.MenuOption("9", "Rowboat");
+            menuUtil.MenuOption("A", "Submarine");
+            menuUtil.MenuOption("0", "Back To Main Menu");
 
-            cui.ForegroundColor(14);
-            cui.Write("0: ");
-            cui.ResetColor();
-            cui.Write("Back To Main Menu");
+
 
             while (true)
             {

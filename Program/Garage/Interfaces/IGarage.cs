@@ -1,7 +1,8 @@
 ﻿using Exercise5.Vehicles;
+using Exercise5.Vehicles.Interfaces;
 using System.Collections.Generic;
 
-namespace Exercise5.Garage
+namespace Exercise5.Garage.Interfaces
 {
     public interface IGarage<T> where T : IVehicle
     {

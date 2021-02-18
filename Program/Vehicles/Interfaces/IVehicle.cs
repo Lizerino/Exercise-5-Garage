@@ -1,4 +1,4 @@
-﻿namespace Exercise5.Vehicles
+﻿namespace Exercise5.Vehicles.Interfaces
 {
     public interface IVehicle
     {

@@ -1,4 +1,4 @@
-﻿namespace Exercise5
+﻿namespace Exercise5.Interfaces
 {
     public interface IStartup
     {

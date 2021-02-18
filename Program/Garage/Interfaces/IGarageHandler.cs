@@ -1,6 +1,7 @@
 ﻿using Exercise5.Vehicles;
+using Exercise5.Vehicles.Interfaces;
 
-namespace Exercise5.Garage
+namespace Exercise5.Garage.Interfaces
 {
     public interface IGarageHandler
     {
