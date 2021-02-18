@@ -7,17 +7,24 @@ namespace Exercise5.Vehicles
     public class Vehicle : IVehicle
     {
         public double CargoCapacity { get; set; }
+
         public string Color { get; set; }
+
         public int SeatingCapacity { get; set; }
+
         public string RegistrationNumber { get; set; }
+
         public double TopSpeed { get; set; }
+
         public double Weight { get; set; }
+
         public double Height { get; set; }
+
         public double Length { get; set; }
+
         public string LicenseRequirement { get; set; }
 
         /// <summary>
-        ///
         /// </summary>
         /// <param name="cargoCapacity"></param>
         /// <param name="color"></param>

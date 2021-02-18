@@ -1,5 +1,4 @@
 ﻿using Exercise5.Garage.Interfaces;
-using Exercise5.Vehicles;
 using Exercise5.Vehicles.Interfaces;
 using System;
 using System.Collections;
@@ -11,6 +10,7 @@ namespace Exercise5.Garage
     public class Garage<T> : IEnumerable<T>, IGarage<T> where T : IVehicle
     {
         public string Name { get; set; }
+
         private T[] garageVehicleList;
 
         /// <summary>
@@ -25,7 +25,8 @@ namespace Exercise5.Garage
         }
 
         /// <summary>
-        /// Add vehicle to first empty spot. If full double the array size and add vehicle to first empty spot.
+        /// Add vehicle to first empty spot. If full double the array size and add vehicle to first
+        /// empty spot.
         /// </summary>
         /// <param name="vehicleToAdd"></param>
         public void AddVehicle(T vehicleToAdd)
@@ -65,14 +66,17 @@ namespace Exercise5.Garage
         private void DoubleArraySize(T vehicle)
         {
             // Create a new temporary array and copy current vehiclelist to temporary array
-            var tempArray = new T[garageVehicleList.Length];             
+            var tempArray = new T[garageVehicleList.Length];
             garageVehicleList.CopyTo(tempArray, 0);
+
             // Get the length of the old array and double it
-            int oldLength = garageVehicleList.Length;            
+            int oldLength = garageVehicleList.Length;
             int newLength = oldLength * 2;
+
             // Create an array with the new size and copy the values back from the temp array
             garageVehicleList = new T[newLength];
             tempArray.CopyTo(garageVehicleList, 0);
+
             // Add vehicle
             garageVehicleList.SetValue(vehicle, oldLength);
         }

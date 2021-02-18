@@ -9,7 +9,6 @@ namespace Exercise5.Vehicles.Land
         public double DecibelLevel { get; set; }
 
         /// <summary>
-        ///
         /// </summary>
         /// <param name="cargoCapacity"></param>
         /// <param name="color"></param>

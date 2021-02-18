@@ -1,5 +1,4 @@
-﻿using Exercise5.Garage;
-using Exercise5.Garage.Interfaces;
+﻿using Exercise5.Garage.Interfaces;
 
 namespace Exercise5.Vehicles.Interfaces
 {

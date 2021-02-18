@@ -1,9 +1,4 @@
-using System;
 using Xunit;
-using Exercise5.Garage;
-using Exercise5.Vehicles;
-using Exercise5.UserInterfaces;
-
 
 namespace Exercise5.Test
 {
@@ -13,7 +8,7 @@ namespace Exercise5.Test
         public void AddVehicle_ShouldWork()
         {
             // Create a garage and add a vehicle
-            var garage = new Garage.Garage<IVehicle>("Test",1);
+            var garage = new Garage.Garage<IVehicle>("Test", 1);
             var vehicle = new Vehicles.Air.Airplane(1, "1", 1, "1", 1, 1, 1, 1, "1", 1, "1");
             garage.AddVehicle(vehicle);
             var numberOfItems = 0;
@@ -27,11 +22,12 @@ namespace Exercise5.Test
         [Fact]
         public void RemoveVehicle_ShouldWork()
         {
-            // Create garage and add a vehicle then remove the same vehicle. Only valid if the AddVehicle test also works
+            // Create garage and add a vehicle then remove the same vehicle. Only valid if the
+            // AddVehicle test also works
             var garage = new Garage.Garage<IVehicle>("Test", 1);
             var vehicle = new Vehicles.Air.Airplane(1, "1", 1, "1", 1, 1, 1, 1, "1", 1, "1");
             garage.AddVehicle(vehicle);
-            garage.RemoveVehicle(vehicle);            
+            garage.RemoveVehicle(vehicle);
             var numberOfItems = 0;
             foreach (var item in garage)
             {
@@ -45,6 +41,7 @@ namespace Exercise5.Test
         {
             // Create garage with 1 spot
             var garage = new Garage.Garage<IVehicle>("Test", 1);
+
             // Add 2 vehicles
             var vehicle = new Vehicles.Air.Airplane(1, "1", 1, "1", 1, 1, 1, 1, "1", 1, "1");
             var vehicle2 = new Vehicles.Air.Airplane(2, "2", 2, "2", 2, 2, 2, 2, "2", 2, "2");
@@ -56,6 +53,6 @@ namespace Exercise5.Test
                 numberOfItems++;
             }
             Assert.True(numberOfItems == 2);
-        }        
+        }
     }
 }

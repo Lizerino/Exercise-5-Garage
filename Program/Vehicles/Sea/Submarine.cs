@@ -8,7 +8,6 @@ namespace Exercise5.Vehicles.Sea
         public int MaxDepth { get; set; }
 
         /// <summary>
-        ///
         /// </summary>
         /// <param name="cargoCapacity"></param>
         /// <param name="color"></param>

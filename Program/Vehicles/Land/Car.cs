@@ -8,7 +8,6 @@ namespace Exercise5.Vehicles.Land
         public double EngineVolume { get; set; }
 
         /// <summary>
-        ///
         /// </summary>
         /// <param name="cargoCapacity"></param>
         /// <param name="color"></param>

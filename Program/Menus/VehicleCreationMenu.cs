@@ -1,9 +1,6 @@
-﻿using Exercise5.Garage;
-using Exercise5.Garage.Interfaces;
+﻿using Exercise5.Garage.Interfaces;
 using Exercise5.Menus.Interfaces;
-using Exercise5.UserInterfaces;
 using Exercise5.UserInterfaces.Interfaces;
-using Exercise5.Vehicles;
 using Exercise5.Vehicles.Interfaces;
 
 namespace Exercise5.Menus
@@ -11,8 +8,11 @@ namespace Exercise5.Menus
     public class VehicleCreationMenu : IVehicleCreationMenu
     {
         private IConsoleUI cui;
+
         private IVehicleHandler vehicleHandler;
+
         private IVehicle vehicle;
+
         private IMenuUtil menuUtil;
 
         public VehicleCreationMenu(IConsoleUI cui, IVehicleHandler vehicleHandler, IMenuUtil menuUtil)
@@ -24,7 +24,7 @@ namespace Exercise5.Menus
 
         public IVehicle Show(IGarage<IVehicle> garage)
         {
-            cui.Clear();            
+            cui.Clear();
             cui.ResetColor();
             cui.WriteLine("What kind of vehicle would you like to create?");
             cui.WriteLine("");
@@ -39,8 +39,6 @@ namespace Exercise5.Menus
             menuUtil.MenuOption("9", "Rowboat");
             menuUtil.MenuOption("A", "Submarine");
             menuUtil.MenuOption("0", "Back To Main Menu");
-
-
 
             while (true)
             {

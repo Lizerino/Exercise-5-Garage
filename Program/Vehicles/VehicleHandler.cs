@@ -1,6 +1,4 @@
-﻿using Exercise5.Garage;
-using Exercise5.Garage.Interfaces;
-using Exercise5.UserInterfaces;
+﻿using Exercise5.Garage.Interfaces;
 using Exercise5.UserInterfaces.Interfaces;
 using Exercise5.Vehicles.Air;
 using Exercise5.Vehicles.Interfaces;
@@ -18,12 +16,19 @@ namespace Exercise5.Vehicles
         private double cargoCapacity;
 
         private string color;
+
         private int seatingCapacity;
+
         private string registrationNumber;
+
         private double topSpeed;
+
         private double weight;
+
         private double height;
+
         private double length;
+
         private string licenseRequirement;
 
         // Air Base Properties
@@ -66,6 +71,7 @@ namespace Exercise5.Vehicles
 
             return result;
         }
+
         // Question: Kan man undvika att slänga garage runt överallt
         private void getBaseVehicleProperties(IGarage<IVehicle> garage)
         {
@@ -114,7 +120,7 @@ namespace Exercise5.Vehicles
 
             // Seating capacity
             cui.WriteLine("Please enter the vehicles seating capacity.");
-            while (!int.TryParse(cui.ReadLine(), out seatingCapacity) || seatingCapacity < 0 || seatingCapacity>int.MaxValue)
+            while (!int.TryParse(cui.ReadLine(), out seatingCapacity) || seatingCapacity < 0 || seatingCapacity > int.MaxValue)
             {
                 cui.WriteLine("Invalid seating capacity. Please enter a seating capacity of 0 or more.");
             }
@@ -289,7 +295,7 @@ namespace Exercise5.Vehicles
         }
 
         public IVehicle CreateCar(IGarage<IVehicle> garage)
-        {            
+        {
             getBaseVehicleProperties(garage);
             getBaseLandProperties();
 
