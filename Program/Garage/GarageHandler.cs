@@ -233,7 +233,7 @@ namespace Exercise5.Garage
         /// <returns></returns>
         private static List<IVehicle> GetMatchingVehicles(IGarage<IVehicle> garage, List<UserInputFinal> userInputFinalList)
         {
-            // Question: Kan man göra det här med linq?
+            // TODO: Kan man göra det här med linq?
             var vehicleList = new List<IVehicle>();
             foreach (var vehicle in garage)
             {
@@ -305,7 +305,7 @@ namespace Exercise5.Garage
         private static IEnumerable<string> getValidProperties(IGarage<IVehicle> garage)
         {
             // Get a list of distinct valid properties
-            // Question: Kan man lösa det här med linq?
+            // TODO: Kan man lösa det här med linq?
             var validPropertiesList = new List<string>();
             foreach (var vehicle in garage)
             {

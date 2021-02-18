@@ -72,7 +72,7 @@ namespace Exercise5.Vehicles
             return result;
         }
 
-        // Question: Kan man undvika att slänga garage runt överallt
+        // TODO: Kan man undvika att slänga garage runt överallt
         private void getBaseVehicleProperties(IGarage<IVehicle> garage)
         {
             //Registry Number

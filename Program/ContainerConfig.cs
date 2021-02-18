@@ -28,9 +28,7 @@ namespace Exercise5
             builder.RegisterType<Startup>().As<IStartup>();
             builder.RegisterType<MenuUtil>().As<IMenuUtil>();
 
-            return builder.Build();
-
-            // Question: Kan man automatisera det här?
+            return builder.Build();            
         }
     }
 }

@@ -11,17 +11,14 @@ namespace Exercise5.Menus
 
         private IGarageHandler garageHandler;
 
-        private IVehicleHandler vehicleHandler;
-
         private IVehicleCreationMenu vehicleCreationMenu;
 
         private IMenuUtil menuUtil;
 
-        public GarageCreationMenu(IConsoleUI cui, IGarageHandler garageHandler, IVehicleHandler vehicleHandler, IVehicleCreationMenu vehicleCreationMenu, IMenuUtil menuUtil)
+        public GarageCreationMenu(IConsoleUI cui, IGarageHandler garageHandler, IVehicleCreationMenu vehicleCreationMenu, IMenuUtil menuUtil)
         {
             this.cui = cui;
-            this.garageHandler = garageHandler;
-            this.vehicleHandler = vehicleHandler;
+            this.garageHandler = garageHandler;           
             this.vehicleCreationMenu = vehicleCreationMenu;
             this.menuUtil = menuUtil;
         }

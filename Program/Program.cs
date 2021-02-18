@@ -10,7 +10,6 @@ namespace Exercise5
         {
             var container = ContainerConfig.Configure();
 
-            // TODO: Try catch file handling
             using (var scope = container.BeginLifetimeScope())
             {
                 var startup = scope.Resolve<IStartup>();
